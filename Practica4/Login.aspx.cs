@@ -13,5 +13,15 @@ namespace Practica4
         {
 
         }
+
+        protected void btnInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Registro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
