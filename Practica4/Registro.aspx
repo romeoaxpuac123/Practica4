@@ -65,7 +65,6 @@
                 <asp:Button ID="btnRegistrar" runat="server" Text ="Registrar"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
             </div>
             
-            
         
      </form>
 
