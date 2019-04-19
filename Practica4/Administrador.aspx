@@ -18,6 +18,7 @@
     background-size: cover;
     }
 </style>
+<body>
     <br />
        <br /><br /><br />
     
@@ -89,12 +90,19 @@
                     <div class="form-group">
                         <asp:Button ID="LOSCREDITOS" runat="server" Text ="Gestión de Creditos"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
                     </div>
+
+
+                <br />
+                <br />
+                    <div class="form-group">
+                        <asp:Button ID="SESION" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                    </div>
                </div>
      </form>
 
        </div>
 
-<body>
+
    
     
     
