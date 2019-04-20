@@ -62,7 +62,7 @@
             
 
             <div class="form-group">
-                <asp:Button ID="btnRegistrar" runat="server" Text ="Registrar"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                <asp:Button ID="btnRegistrar" runat="server" Text ="Registrar"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="btnRegistrar_Click"></asp:Button>
             </div>
             
         
