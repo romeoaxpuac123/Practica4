@@ -90,6 +90,11 @@
                     <div class="form-group">
                         <asp:Button ID="SOLICITAR" runat="server" Text ="SOLICITA UN CREDITO AQUI"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
                     </div>
+
+                <img src="gif2.gif" style="height: 111px; width: 140px"></center>
+                    <div class="form-group">
+                        <asp:Button ID="VERPERFIL" runat="server" Text ="VE TU PERFIL AQUI"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                    </div>
             </div>
         </form>
 

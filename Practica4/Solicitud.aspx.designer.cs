@@ -10,7 +10,7 @@
 namespace Practica4 {
     
     
-    public partial class Inicio {
+    public partial class Solicitud {
         
         /// <summary>
         /// Control USUARIO.
@@ -49,31 +49,13 @@ namespace Practica4 {
         protected global::System.Web.UI.WebControls.Button SESIONX;
         
         /// <summary>
-        /// Control SALDO.
+        /// Control NoCuenta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SALDO;
-        
-        /// <summary>
-        /// Control Label1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// Control CUENTASD.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox CUENTASD;
+        protected global::System.Web.UI.WebControls.Label NoCuenta;
         
         /// <summary>
         /// Control Monto.
@@ -94,13 +76,22 @@ namespace Practica4 {
         protected global::System.Web.UI.WebControls.TextBox txtCuenta;
         
         /// <summary>
-        /// Control TRANSFERIRX.
+        /// Control Descripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button TRANSFERIRX;
+        protected global::System.Web.UI.WebControls.Label Descripcion;
+        
+        /// <summary>
+        /// Control txtDescripcion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
         
         /// <summary>
         /// Control SOLICITAR.
