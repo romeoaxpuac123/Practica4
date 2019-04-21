@@ -14,11 +14,14 @@ namespace Practica4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["Codigo_Usuario"] = txtCodigo.Text;
+           
+                
+            
         }
         protected void btnInicio_Click(object sender, EventArgs e)
         {
-           if(Ingreso() == true)
+            Session["Codigo_Usuario"] = txtCodigo.Text;
+            if (Ingreso() == true)
             {
                 MessageBox.Show("Bienvenido " + txtUsuario.Text);
                 Response.Redirect("Inicio.aspx");
@@ -67,5 +70,6 @@ namespace Practica4
             }
             return false;
         }
+
     }
 }

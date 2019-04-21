@@ -36,20 +36,20 @@
         <form runat="server" class="form-horizontal center-block">
             <center>
             <div class="col-sm-10">
-                    <asp:Label ID= "USUARIO" runat="server" Text="USUARIO" CssClass="control-label col-sm-2"></asp:Label> 
+                    <asp:Label ID= "USUARIO" runat="server" Text="USUARIO" CssClass="control-label "></asp:Label> 
             </div>
            <div class="col-sm-10">
-                    <asp:Label ID= "CUENTA2" runat="server" Text="CUENTA" CssClass="control-label col-sm-2"></asp:Label> 
+                    <asp:Label ID= "CUENTA2" runat="server" Text="CUENTA" CssClass="control-label "></asp:Label> 
             </div>
             <div class="col-sm-10">
-                 <asp:Label ID= "Nombre" runat="server" Text="NOMBRE" CssClass="control-label col-sm-2"></asp:Label> 
+                 <asp:Label ID= "Nombre" runat="server" Text="NOMBRE" CssClass="control-label "></asp:Label> 
            </div>
                 <br />
            <br />
                 <br />
            <div class="form-group">
                <br />
-               <asp:Button ID="SESIONX" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+               <asp:Button ID="SESIONX" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SESIONX_Click"></asp:Button>
            </div>
 
                 <br />
@@ -57,7 +57,7 @@
             </center>
             <center><img src="solicitud.png" style="height: 61px; width: 349px"><br /></center>
             <div class="col-sm-10">
-                    <asp:Label ID= "NoCuenta" runat="server" Text="CUENTA" CssClass="control-label col-sm-2"></asp:Label> 
+                    <asp:Label ID= "NoCuenta" runat="server" Text="CUENTA" CssClass="control-label"></asp:Label> 
             </div>
             <div class="col-sm-10">
             <asp:Label ID= "Monto" runat="server" Text="Q." CssClass="control-label col-sm-2"></asp:Label> 
@@ -75,12 +75,12 @@
             <br />
             <div class="form-group">
                 <br />
-                        <asp:Button ID="SOLICITAR" runat="server" Text ="ENVIAR SOLICITUD"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="SOLICITAR" runat="server" Text ="ENVIAR SOLICITUD"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SOLICITAR_Click"></asp:Button>
              </div>
 
             <center><img src="gif2.gif" style="height: 111px; width: 140px"></center>
                     <div class="form-group">
-                        <asp:Button ID="VERPERFIL" runat="server" Text ="VE TU PERFIL AQUI"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="VERPERFIL" runat="server" Text ="VE TU PERFIL AQUI"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="VERPERFIL_Click"></asp:Button>
                     </div>
         </form>
 

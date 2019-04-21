@@ -36,17 +36,17 @@
         <form runat="server" class="form-horizontal center-block">
             <center>
             <div class="col-sm-10">
-                    <asp:Label ID= "USUARIO" runat="server" Text="USUARIO" CssClass="control-label col-sm-2"></asp:Label> 
+                    <asp:Label ID= "USUARIO" runat="server" Text="USUARIO" CssClass="control-label "></asp:Label> 
             </div>
            <div class="col-sm-10">
-                    <asp:Label ID= "CUENTA2" runat="server" Text="CUENTA" CssClass="control-label col-sm-2"></asp:Label> 
+                    <asp:Label ID= "CUENTA2" runat="server" Text="CUENTA" CssClass="control-label "></asp:Label> 
             </div>
             <div class="col-sm-10">
-                 <asp:Label ID= "Nombre" runat="server" Text="NOMBRE" CssClass="control-label col-sm-2"></asp:Label> 
+                 <asp:Label ID= "Nombre" runat="server" Text="NOMBRE" CssClass="control-label "></asp:Label> 
            </div>
            <br />
            <div class="form-group">
-               <asp:Button ID="SESIONX" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+               <asp:Button ID="SESIONX" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SESIONX_Click"></asp:Button>
            </div>
 
                 <br />
@@ -54,7 +54,7 @@
             <center><img src="saldo.png" style="height: 61px; width: 340px"></center>
                 <center><img src="gif2.gif" style="height: 111px; width: 140px"></center>
                 <div class="form-group">
-               <asp:Button ID="SALDO" runat="server" Text ="Consulta tu Saldo Aquí"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+               <asp:Button ID="SALDO" runat="server" Text ="Consulta tu Saldo Aquí"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SALDO_Click"></asp:Button>
            </div>
                 <br />
                <br />
@@ -64,13 +64,10 @@
             <div class="form-group">
                 <asp:Label ID= "Label1" runat="server" Text="CUENTA" CssClass="control-label col-sm-2"></asp:Label> 
                 <div class="col-sm-10">
-                    <asp:ListBox  ID="CUENTASD" runat="server" Cssclass="form-control" AutoPostBack="True" Height="28px" Rows="1">
-                        <asp:ListItem>SDFA</asp:ListItem>
-                        <asp:ListItem>SDAFDS</asp:ListItem>
-                        <asp:ListItem>SADFASD</asp:ListItem>
-                        <asp:ListItem>ASDF</asp:ListItem>
-                        <asp:ListItem>SADF</asp:ListItem>
+                    <asp:ListBox  ID="CUENTASD" runat="server" Cssclass="form-control"  Height="28px" Rows="1" DataSourceID="SqlDataSource1" DataTextField="numero_de_cuenta" DataValueField="numero_de_cuenta">
+                       
                     </asp:ListBox>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [numero_de_cuenta] FROM [cuenta_bancaria]"></asp:SqlDataSource>
                 </div>
 
                 <asp:Label ID= "Monto" runat="server" Text="TOTAL" CssClass="control-label col-sm-2"></asp:Label> 
@@ -80,7 +77,7 @@
                  <br />
                 <br />
                     <div class="form-group">
-                        <asp:Button ID="TRANSFERIRX" runat="server" Text ="TRANSFERIR"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="TRANSFERIRX" runat="server" Text ="TRANSFERIR"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="TRANSFERIRX_Click"></asp:Button>
                     </div>
 
                 <br />
@@ -88,12 +85,12 @@
                 <center><img src="SOLI.png" style="height: 111px; width: 328px"></center>
                 <center><img src="gif2.gif" style="height: 111px; width: 140px"></center>
                     <div class="form-group">
-                        <asp:Button ID="SOLICITAR" runat="server" Text ="SOLICITA UN CREDITO AQUI"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="SOLICITAR" runat="server" Text ="SOLICITA UN CREDITO AQUI"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SOLICITAR_Click"></asp:Button>
                     </div>
 
                 <img src="gif2.gif" style="height: 111px; width: 140px"></center>
                     <div class="form-group">
-                        <asp:Button ID="VERPERFIL" runat="server" Text ="VE TU PERFIL AQUI"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="VERPERFIL" runat="server" Text ="VE TU PERFIL AQUI"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="VERPERFIL_Click"></asp:Button>
                     </div>
             </div>
         </form>
