@@ -14,6 +14,7 @@ namespace Practica4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (Session["Codigo_Usuario"] == null)
             {
                 Response.Redirect("Login.aspx");
@@ -23,6 +24,8 @@ namespace Practica4
                 Nombre.Text = "Nombre: " + NombreUsuario();
                 USUARIO.Text = "Usuario: " + Usuario();
                 CUENTA2.Text = "Cuenta No. " + Convert.ToString(Cuenta());
+                
+
             }
         }
         public string NombreUsuario()

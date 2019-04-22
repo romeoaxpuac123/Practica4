@@ -250,6 +250,7 @@ namespace Practica4
 
         protected void VERPERFIL_Click(object sender, EventArgs e)
         {
+            Session["Cuenta_Usuario"] = Cuenta();
             Response.Redirect("Perfil.aspx");
         }
     }

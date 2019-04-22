@@ -54,17 +54,81 @@
 
                 <center><img src="tustransacciones.png" style="height: 61px; width: 250px"><br /></center>
                 <div class="col-sm-10">
-                    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#999999" DataKeyNames="codigo_transferencia" DataSourceID="SqlDataSource1">
+                        <Columns>
+                            <asp:BoundField DataField="codigo_transferencia" HeaderText="Trasferencia" InsertVisible="False" ReadOnly="True" SortExpression="codigo_transferencia" />
+                            <asp:BoundField DataField="cuenta_a_transferir" HeaderText="Cuenta" SortExpression="cuenta_a_transferir" />
+                            <asp:BoundField DataField="monto" HeaderText="monto" SortExpression="monto" />
+                            <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha" />
+                        </Columns>
+                    </asp:GridView>
+
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [codigo_transferencia], [cuenta_a_transferir], [monto], [fecha] FROM [transferencia] WHERE ([numero_de_cuenta] = @numero_de_cuenta)">
+                        <SelectParameters>
+                            <asp:SessionParameter DefaultValue="10221022" Name="numero_de_cuenta" SessionField="Cuenta_Usuario" Type="Int32" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
 
                 </div>
                 <center><img src="tuscreditos.png" style="height: 61px; width: 250px"><br /></center>
                 <div class="col-sm-10">
-                        <asp:GridView ID="GridView2" runat="server"></asp:GridView>
+                        <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#999999" DataKeyNames="codigo_credito" DataSourceID="SqlDataSource2">
+                            <Columns>
+                                <asp:BoundField DataField="codigo_credito" HeaderText="Codigo" InsertVisible="False" ReadOnly="True" SortExpression="codigo_credito" />
+                                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                                <asp:BoundField DataField="monto" HeaderText="monto" SortExpression="monto" />
+                                <asp:BoundField DataField="estado" HeaderText="estado" SortExpression="estado" />
+                            </Columns>
+                        </asp:GridView>
+
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [codigo_credito], [descripcion], [monto], [estado] FROM [credito] WHERE ([numero_de_cuenta] = @numero_de_cuenta)">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="numero_de_cuenta" SessionField="Cuenta_Usuario" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
 
                 </div>
                 <center><img src="tusdebitos.png" style="height: 61px; width: 250px"><br /></center>
                 <div class="col-sm-10">
-                        <asp:GridView ID="GridView3" runat="server"></asp:GridView>
+                        <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#999999" DataSourceID="SqlDataSource3">
+                            <Columns>
+                                <asp:BoundField DataField="codigo_debito" HeaderText="Codigo" InsertVisible="False" ReadOnly="True" SortExpression="codigo_debito" />
+                                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                                <asp:BoundField DataField="monto" HeaderText="monto" SortExpression="monto" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [codigo_debito], [descripcion], [monto] FROM [debito] WHERE ([numero_de_cuenta] = @numero_de_cuenta)">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="numero_de_cuenta" SessionField="Cuenta_Usuario" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                </div>
+                <center><img src="losdepositos.png" style="height: 61px; width: 250px"><br /></center>
+                <div class="col-sm-10">
+                        <asp:GridView ID="GridView4" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#999999" DataKeyNames="codigo_deposito" DataSourceID="SqlDataSource4">
+                            <Columns>
+                                <asp:BoundField DataField="codigo_deposito" HeaderText="Codigo" InsertVisible="False" ReadOnly="True" SortExpression="codigo_deposito" />
+                                <asp:BoundField DataField="monto" HeaderText="monto" SortExpression="monto" />
+                                <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [codigo_deposito], [monto], [fecha] FROM [deposito] WHERE ([numero_de_cuenta] = @numero_de_cuenta)">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="numero_de_cuenta" SessionField="Cuenta_Usuario" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <asp:GridView ID="GridView5" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#999999" DataKeyNames="codigo_transferencia" DataSourceID="SqlDataSource5">
+                            <Columns>
+                                <asp:BoundField DataField="codigo_transferencia" HeaderText="Codigo" InsertVisible="False" ReadOnly="True" SortExpression="codigo_transferencia" />
+                                <asp:BoundField DataField="monto" HeaderText="monto" SortExpression="monto" />
+                                <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [codigo_transferencia], [monto], [fecha] FROM [transferencia] WHERE ([cuenta_a_transferir] = @cuenta_a_transferir)">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="cuenta_a_transferir" SessionField="Cuenta_Usuario" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
                 </div>
         </center>
 
