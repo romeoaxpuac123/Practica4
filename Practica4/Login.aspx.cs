@@ -20,15 +20,22 @@ namespace Practica4
         }
         protected void btnInicio_Click(object sender, EventArgs e)
         {
-            Session["Codigo_Usuario"] = txtCodigo.Text;
-            if (Ingreso() == true)
+            if(txtCodigo.Text=="Admin123" && txtPassword.Text == "Admin123" && txtUsuario.Text == "Admin123")
             {
-                MessageBox.Show("Bienvenido " + txtUsuario.Text);
-                Response.Redirect("Inicio.aspx");
-            }
-            else
-            {
-                MessageBox.Show("Datos Incorrectos, Intentelo de Nuevo");
+                Session["Codigo_Usuario"] = "admin";
+                Response.Redirect("Administrador.aspx");
+            }else{
+
+                Session["Codigo_Usuario"] = txtCodigo.Text;
+                if (Ingreso() == true)
+                {
+                    MessageBox.Show("Bienvenido " + txtUsuario.Text);
+                    Response.Redirect("Inicio.aspx");
+                }
+                else
+                {
+                    MessageBox.Show("Datos Incorrectos, Intentelo de Nuevo");
+                }
             }
             txtCodigo.Text = "";
             txtPassword.Text = "";

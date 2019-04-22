@@ -36,7 +36,16 @@
             <div class="form-group">
                 <div class="col-sm-10">
                     <div class="col-sm-10">
-                    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#999999" BorderColor="#333333" DataKeyNames="codigo_credito" DataSourceID="SqlDataSource1">
+                        <Columns>
+                            <asp:BoundField DataField="codigo_credito" HeaderText="Codigo" InsertVisible="False" ReadOnly="True" SortExpression="codigo_credito" />
+                            <asp:BoundField DataField="numero_de_cuenta" HeaderText="Cuenta" SortExpression="numero_de_cuenta" />
+                            <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                            <asp:BoundField DataField="monto" HeaderText="monto" SortExpression="monto" />
+                            <asp:BoundField DataField="estado" HeaderText="estado" SortExpression="estado" />
+                        </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT * FROM [credito]"></asp:SqlDataSource>
                     </div>
                      <br />
                     <br />
@@ -55,15 +64,15 @@
                 
             </div>
             <div class="form-group">
-                <asp:Button ID="Gestionar" runat="server" Text ="Gestionar Credito"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                <asp:Button ID="Gestionar" runat="server" Text ="Gestionar Credito"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="Gestionar_Click"></asp:Button>
             </div>
             <br />
             <div class="form-group">
-                <asp:Button ID="Regresar" runat="server" Text ="Depositos y Debitos"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                <asp:Button ID="Regresar" runat="server" Text ="Depositos y Debitos"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="Regresar_Click"></asp:Button>
             </div>
             <br />
             <div class="form-group">
-                <asp:Button ID="Session2" runat="server" Text ="Cerrar Sesión"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                <asp:Button ID="Session2" runat="server" Text ="Cerrar Sesión"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="Session2_Click"></asp:Button>
             </div>
             <br />
             <br />

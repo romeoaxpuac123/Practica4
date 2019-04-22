@@ -36,13 +36,10 @@
             <div class="form-group">
                 <asp:Label ID= "Cuenta" runat="server" Text="CUENTA" CssClass="control-label col-sm-2"></asp:Label> 
                 <div class="col-sm-10">
-                    <asp:ListBox  ID="TextBox1" runat="server" Cssclass="form-control" AutoPostBack="True" Height="28px" Rows="1">
-                        <asp:ListItem>SDFA</asp:ListItem>
-                        <asp:ListItem>SDAFDS</asp:ListItem>
-                        <asp:ListItem>SADFASD</asp:ListItem>
-                        <asp:ListItem>ASDF</asp:ListItem>
-                        <asp:ListItem>SADF</asp:ListItem>
+                    <asp:ListBox  ID="LasCuentas" runat="server" Cssclass="form-control"  Height="28px" Rows="1" DataSourceID="SqlDataSource1" DataTextField="numero_de_cuenta" DataValueField="numero_de_cuenta">
+                        
                     </asp:ListBox>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [numero_de_cuenta] FROM [cuenta_bancaria]"></asp:SqlDataSource>
                 </div>
 
                 <asp:Label ID= "Monto" runat="server" Text="TOTAL" CssClass="control-label col-sm-2"></asp:Label> 
@@ -51,7 +48,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <asp:Button ID="btnRealizarDeposito" runat="server" Text ="Depositar"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                <asp:Button ID="btnRealizarDeposito" runat="server" Text ="Depositar"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="btnRealizarDeposito_Click"></asp:Button>
             </div>
             <br />
             <br />
@@ -60,12 +57,8 @@
             <div class="form-group">
                 <asp:Label ID= "CUENTA2" runat="server" Text="CUENTA" CssClass="control-label col-sm-2"></asp:Label> 
                 <div class="col-sm-10">
-                    <asp:ListBox  ID="CUENTASD" runat="server" Cssclass="form-control" AutoPostBack="True" Height="28px" Rows="1">
-                        <asp:ListItem>SDFA</asp:ListItem>
-                        <asp:ListItem>SDAFDS</asp:ListItem>
-                        <asp:ListItem>SADFASD</asp:ListItem>
-                        <asp:ListItem>ASDF</asp:ListItem>
-                        <asp:ListItem>SADF</asp:ListItem>
+                    <asp:ListBox  ID="CUENTASD" runat="server" Cssclass="form-control" Height="28px" Rows="1" DataSourceID="SqlDataSource1" DataTextField="numero_de_cuenta" DataValueField="numero_de_cuenta">
+                      
                     </asp:ListBox>
                 </div>
 
@@ -81,21 +74,21 @@
                 <br />
                 <br />
                     <div class="form-group">
-                        <asp:Button ID="Debitar" runat="server" Text ="Debitar"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="Debitar" runat="server" Text ="Debitar"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="Debitar_Click"></asp:Button>
                     </div>
 
 
                 <br />
                 <br />
                     <div class="form-group">
-                        <asp:Button ID="LOSCREDITOS" runat="server" Text ="Gestión de Creditos"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="LOSCREDITOS" runat="server" Text ="Gestión de Creditos"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="LOSCREDITOS_Click"></asp:Button>
                     </div>
 
 
                 <br />
                 <br />
                     <div class="form-group">
-                        <asp:Button ID="SESION" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px"></asp:Button>
+                        <asp:Button ID="SESION" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SESION_Click"></asp:Button>
                     </div>
                </div>
      </form>
