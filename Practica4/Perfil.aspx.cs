@@ -7,13 +7,14 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
-using System.IO;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.text.html;
-using iTextSharp.text.html.simpleparser;
-using Image = iTextSharp.text.Image;
-using System.Text;
+
+//using System.IO;
+//using iTextSharp.text;
+//using iTextSharp.text.pdf;
+//using iTextSharp.text.html;
+//using iTextSharp.text.html.simpleparser;
+//using Image = iTextSharp.text.Image;
+//using System.Text;
 
 namespace Practica4
 {
@@ -126,37 +127,7 @@ namespace Practica4
 
         protected void Archivo_Click(object sender, EventArgs e)
         {
-            Response.Clear();
-            Response.Buffer = true;
-            Response.Charset = "";
-            Response.AddHeader("content-disposition", "attachment;filename=TuCuenta.xls");
-            Response.ContentType = "application/ms-excel ";
-            StringWriter sw = new StringWriter();
-            HtmlTextWriter hw = new HtmlTextWriter(sw);
-
-            GridView1.AllowPaging = false;
-            GridView1.DataBind();
-            GridView1.RenderControl(hw);
-
-            GridView2.AllowPaging = false;
-            GridView2.DataBind();
-            GridView2.RenderControl(hw);
-
-            GridView3.AllowPaging = false;
-            GridView3.DataBind();
-            GridView3.RenderControl(hw);
-
-            GridView4.AllowPaging = false;
-            GridView4.DataBind();
-            GridView4.RenderControl(hw);
-
-            GridView5.AllowPaging = false;
-            GridView5.DataBind();
-            GridView5.RenderControl(hw);
-
-            Response.Output.Write(sw.ToString());
-            Response.Flush();
-            Response.End();
+           
         }
         public override void VerifyRenderingInServerForm(System.Web.UI.Control control)
         {
@@ -165,37 +136,7 @@ namespace Practica4
 
         protected void Word_Click(object sender, EventArgs e)
         {
-            Response.Clear();
-            Response.Buffer = true;
-            Response.Charset = "";
-            Response.AddHeader("content-disposition", "attachment;filename=TuCuenta.doc");
-            Response.ContentType = "application/ms-word ";
-            StringWriter sw = new StringWriter();
-            HtmlTextWriter hw = new HtmlTextWriter(sw);
-
-            GridView1.AllowPaging = false;
-            GridView1.DataBind();
-            GridView1.RenderControl(hw);
-
-            GridView2.AllowPaging = false;
-            GridView2.DataBind();
-            GridView2.RenderControl(hw);
-
-            GridView3.AllowPaging = false;
-            GridView3.DataBind();
-            GridView3.RenderControl(hw);
-
-            GridView4.AllowPaging = false;
-            GridView4.DataBind();
-            GridView4.RenderControl(hw);
-
-            GridView5.AllowPaging = false;
-            GridView5.DataBind();
-            GridView5.RenderControl(hw);
-
-            Response.Output.Write(sw.ToString());
-            Response.Flush();
-            Response.End();
+           
         }
         public decimal ConsultaDeSaldo2(String cuenta)
         {
@@ -222,6 +163,7 @@ namespace Practica4
 
         protected void PDF_Click(object sender, EventArgs e)
         {
+            /*
             iTextSharp.text.Image img = Image.GetInstance("C:\\Users\\Bayyron\\Desktop\\a.png");
 
             Response.ContentType = "application/pdf ";
@@ -325,6 +267,7 @@ namespace Practica4
             pdfDoc.Close();
             Response.Write(pdfDoc);
             Response.End();
+            */
 
         }
     }
