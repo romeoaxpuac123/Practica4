@@ -51,8 +51,8 @@
                <br />
                <asp:Button ID="SESIONX" runat="server" Text ="Cerrar Sesion"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SESIONX_Click"></asp:Button>
            </div>
-
-                <center><img src="tustransacciones.png" style="height: 61px; width: 250px"><br /></center>
+                <center>
+                    <center><img src="tustransacciones.png" style="height: 61px; width: 250px"><br /></center>
                 <div class="col-sm-10">
                     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" BackColor="#999999" DataKeyNames="codigo_transferencia" DataSourceID="SqlDataSource1">
                         <Columns>
@@ -62,7 +62,7 @@
                             <asp:BoundField DataField="fecha" HeaderText="fecha" SortExpression="fecha" />
                         </Columns>
                     </asp:GridView>
-
+                    
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Practica3_AYD1ConnectionString %>" SelectCommand="SELECT [codigo_transferencia], [cuenta_a_transferir], [monto], [fecha] FROM [transferencia] WHERE ([numero_de_cuenta] = @numero_de_cuenta)">
                         <SelectParameters>
                             <asp:SessionParameter DefaultValue="10221022" Name="numero_de_cuenta" SessionField="Cuenta_Usuario" Type="Int32" />
@@ -138,6 +138,16 @@
             <center><img src="gif2.gif" style="height: 111px; width: 140px"></center>
                     <div class="form-group">
                         <asp:Button ID="SOLIC" runat="server" Text ="SOLICITA UN CREDITO AQUI"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="SOLIC_Click"></asp:Button>
+                    </div>
+
+            <div class="form-group">
+                    </div>
+
+             <div class="form-group">
+                    </div>
+
+             <div class="form-group">
+                        <asp:Button ID="PDF" runat="server" Text ="Imprime Tus Transacciones En PDF"  Cssclass="form-control btn btn-primary"  Width="247px" OnClick="PDF_Click"  ></asp:Button>
                     </div>
               
         </form>
