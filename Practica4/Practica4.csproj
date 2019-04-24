@@ -182,6 +182,7 @@
     <Compile Include="Administrador.aspx.designer.cs">
       <DependentUpon>Administrador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdministradorM.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -205,6 +206,7 @@
     <Compile Include="Creditos.aspx.designer.cs">
       <DependentUpon>Creditos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CreditosM.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -222,6 +224,7 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InicioM.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +240,7 @@
     <Compile Include="Perfil.aspx.designer.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PerfilM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
@@ -267,6 +271,7 @@
     <Compile Include="Solicitud.aspx.designer.cs">
       <DependentUpon>Solicitud.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SolicitudM.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
