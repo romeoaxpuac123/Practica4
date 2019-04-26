@@ -41,6 +41,7 @@ namespace Practica4
             comxx.CommandText = "ExistenciaDeCuenta"; //Stored Procedure Name
             comxx.Parameters.Add("@numerodecuenta", SqlDbType.NVarChar).Value = Cuenta;
             comxx.ExecuteNonQuery();
+            asdfkljasdhfsahdkjhsdahkjasdhfjkahsdfk
             int cuenta1 = 0;
             decimal ElSaldo = 0;
             SqlDataReader readerxx = comxx.ExecuteReader();
